@@ -1,0 +1,19 @@
+{
+  "name": "organiizeme-backend",
+  "version": "1.0.0",
+  "description": "The backend for OrganiizeMe App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/la-ferreira-bianca/OrganiizeMe-Backend.git"
+  },
+  "author": "Bianca Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/la-ferreira-bianca/OrganiizeMe-Backend/issues"
+  },
+  "homepage": "https://github.com/la-ferreira-bianca/OrganiizeMe-Backend#readme"
+}
