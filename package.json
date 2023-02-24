@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "The backend for OrganiizeMe App",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/la-ferreira-bianca/OrganiizeMe-Backend/issues"
   },
-  "homepage": "https://github.com/la-ferreira-bianca/OrganiizeMe-Backend#readme"
+  "homepage": "https://github.com/la-ferreira-bianca/OrganiizeMe-Backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
