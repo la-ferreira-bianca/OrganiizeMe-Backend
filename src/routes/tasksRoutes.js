@@ -7,6 +7,7 @@ router
   .get("/tasks", TasksController.showTasks)
   .get("/tasks/:id", TasksController.showTaskByID)
   .post("/tasks", TasksController.insertTask)
-  .put("/tasks/:id", TasksController.updateTask);
+  .put("/tasks/:id", TasksController.updateTask)
+  .delete("/tasks/:id", TasksController.deleteTask);
 
 export default router;

@@ -44,6 +44,18 @@ class TasksController {
       }
     });
   };
+
+  static deleteTask = (req, res) => {
+    const id = req.params.id
+
+    tasks.findByIdAndDelete(id, (error) => {
+        if(!error) {
+            res.status(200).send({message: 'task removida com sucesso'})
+        } else {
+            res.status(500).send({message: `${error.message}`})
+        }
+    })
+  }
 }
 
 export default TasksController;
