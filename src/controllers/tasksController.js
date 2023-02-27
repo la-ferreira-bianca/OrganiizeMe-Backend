@@ -3,7 +3,9 @@ import tasks from "../models/Task.js";
 //arquivo de routes for tasks
 class TasksController {
   static showTasks = (req, res) => {
-    tasks.find((error, tasks) => {
+    tasks.find()
+    .populate("category")
+    .exec((error, tasks) => {
       res.status(200).json(tasks);
     });
   };
@@ -11,7 +13,9 @@ class TasksController {
   static showTaskByID = (req, res) => {
     const id = req.params.id
 
-    tasks.findById(id, (error, tasks) => {
+    tasks.findById(id)
+    .populate("category", "title")
+    .exec((error, tasks) => {
         if(error) {
             res.status(400).send({message: `${error.message} Não foi possivel achar o id da task`})
         } else {
