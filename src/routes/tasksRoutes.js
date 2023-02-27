@@ -5,6 +5,8 @@ const router = express.Router();
 
 router
   .get("/tasks", TasksController.showTasks)
-  .post("/tasks", TasksController.insertTask);
+  .get("/tasks/:id", TasksController.showTaskByID)
+  .post("/tasks", TasksController.insertTask)
+  .put("/tasks/:id", TasksController.updateTask);
 
 export default router;
