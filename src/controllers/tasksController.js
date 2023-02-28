@@ -6,7 +6,9 @@ class TasksController {
     tasks.find()
     .populate("category")
     .exec((error, tasks) => {
-      res.status(200).json(tasks);
+      res.status(200).json({
+        result: tasks
+      });
     });
   };
 
