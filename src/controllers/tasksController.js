@@ -60,6 +60,17 @@ class TasksController {
         }
     })
   }
+
+  static showTasksByCategory = (req, res) => {
+    const category = req.query.category
+
+    tasks.find({'category': category}, {}, (error, tasks) => {
+      if (error) {
+        res.status(500).send(`erro foi ${error.message}`)  
+      }
+      res.status(200).send(tasks)
+    })
+  }
 }
 
 export default TasksController;
