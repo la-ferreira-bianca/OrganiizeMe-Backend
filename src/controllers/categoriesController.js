@@ -4,7 +4,9 @@ import categories from "../models/Category.js";
 class CategoriesController {
   static showCategory = (req, res) => {
     categories.find((error, categories) => {
-      res.status(200).json(categories);
+      res.status(200).json({
+        result: categories
+      });
     });
   };
 
