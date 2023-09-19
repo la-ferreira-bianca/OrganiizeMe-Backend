@@ -1,2 +1,2 @@
-# OrganiizeMe-Backend
-A backend for OrganiizeMe App
+# OrganiizeMe-API
+A CRUD API for Organiziime
